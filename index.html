@@ -8,7 +8,7 @@
     <title>Layout - Ejercicio</title>
 </head>
 <body>
-  <nav>
+  <nav class="bg-gray-50 shadow-lg">
     <ul>
       <div>
         <li>
@@ -47,7 +47,7 @@
     </ul>
   </nav>
     <main id="Layout">
-      <section class="bg-gray-50">
+      <section class="bg-gray-50 flex flex-col place-content-center h-lvh">
         <div class="mx-auto max-w-screen-xl px-4 lg:-mt-16 lg:flex lg:h-screen lg:items-center">
           <div class="mx-auto max-w-xl text-center">
             <h1 class="text-3xl font-extrabold sm:text-5xl">
@@ -71,17 +71,15 @@
           </div>
         </div>
       </section>
-      <dialog class='w-80 p-12 rounded flex justify-center flex-col transition'>
-        
+      <dialog class='w-80 p-12 rounded justify-center flex-col transition'>
         <form method="dialog" class="flex justify-center flex-col transition">
           <a href="#" class="group block overflow-hidden">
             <div class="relative h-[350px] sm:h-[450px]">
               <img
                 src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
                 alt=""
-                class="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0"
+                class="absolute inset-0 h-full w-full object-cover opacity-100 group-hover:opacity-0 transition"
               />
-          
               <img
                 src="https://images.unsplash.com/photo-1523381140794-a1eef18a37c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwcm9maWxlLXBhZ2V8MjQ2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
                 alt=""
@@ -105,11 +103,11 @@
       </dialog>
     </main>
     <script>
-      const dialog = document.querySelector('dialog');
+      const $dialog = document.querySelector('dialog');
       const $button = document.getElementById('showModal');
       $button.addEventListener('click', () => {
-        dialog.showModal();
-      });
+        $dialog.showModal();
+      })
     </script>
 </body>
 </html>
